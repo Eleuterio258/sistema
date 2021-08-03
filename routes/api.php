@@ -19,4 +19,4 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
 
 
 Route::get('getActividadesPendentesAlocadasByUser/{id}',[ActividadeController::class, 'getActividadesPendentesAlocadasByUser']);
-
+Route::post('cadatrarActividade', [ActividadeController::class, 'cadatrarActividade']);
