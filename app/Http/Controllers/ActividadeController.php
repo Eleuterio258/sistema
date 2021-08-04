@@ -11,7 +11,7 @@ class ActividadeController extends Controller
     {
 
         try {
-            $actividadesPendente = Issue::where("id" , $id)->where("is_aproved" , false)->get();
+            $actividadesPendente = Issue::where("author_id" , $id)->where("is_aproved" , false)->get();
             return $actividadesPendente;
         } catch (\Exception $e) {
             return ["message" => "ERROR"];
